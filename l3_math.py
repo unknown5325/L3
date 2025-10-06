@@ -58,6 +58,9 @@ match ch:
 
 
 '''
+import statistics
+import math
+
 spic = input("Введите список: ").split()
 for i in range(0, len(spic)):
     spic[i] = int(spic[i])
@@ -84,4 +87,10 @@ match ch:
         razn = max2 - min2
         m = min2 * max2**(razn-1)
         print(m)
+    case _:
+        med = statistics.median(spic)
+        print(med)
+        fact = math.factorial(med)
+        print(fact)
+
 '''
