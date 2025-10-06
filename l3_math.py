@@ -55,3 +55,33 @@ match ch:
                 sumb += spic[i]
             print(sumb)
             '''
+
+
+'''
+spic = input("Введите список: ").split()
+for i in range(0, len(spic)):
+    spic[i] = int(spic[i])
+ch = int(input("Введите параметр: "))
+print(spic)
+match ch:
+    case 0:
+        print(min(spic))
+        if spic.count(min(spic)) >= 2:
+            print(spic.count(min(spic)))
+    case 1:
+        print(max(spic))
+        if spic.count(max(spic)) >= 2:
+            print(spic.count(max(spic)))
+    case 2:
+        a = min(spic)
+        b = max(spic)
+        c = b - a
+        d = a + (c-1)*b
+        print(d)
+    case 3:
+        min2 = min(spic)
+        max2 = max(spic)
+        razn = max2 - min2
+        m = min2 * max2**(razn-1)
+        print(m)
+'''
